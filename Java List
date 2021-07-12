@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        List<Integer> L=new ArrayList<>();
+        for(int i=0;i<n;i++)
+        {
+            L.add(sc.nextInt());
+        }
+        int Q=sc.nextInt();
+        for(int i=0;i<Q;i++)
+        {
+            switch(sc.next())
+            {
+                case "Insert":
+                    L.add(sc.nextInt(),sc.nextInt());
+                    break;
+                case "Delete":
+                    L.remove(sc.nextInt());
+            }
+        }
+        for(Integer e:L)
+        {
+            System.out.print(e+" ");
+        }
+    }
+}
